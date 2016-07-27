@@ -8,6 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header class='main-header'>
+    <h1>Reddit</h1>
+    <%= render 'shared/nav' %>
+  </header>
+
   <body>
     <%= yield %>
   </body>
