@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+25.times do
+  link = Link.create(title: Faker::Internet.domain_word, url: Faker::Internet.url)
+  rand(1..5).times do
+    Vote.create(link: link)
+  end
+end

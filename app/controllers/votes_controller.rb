@@ -24,7 +24,7 @@ class VotesController < ApplicationController
     def create
       vote = Vote.new(vote_params)
       if vote.save
-        redirect_to vote
+        redirect_to "/links/#{vote.link_id}"
       else
         render :new
       end
@@ -39,7 +39,7 @@ class VotesController < ApplicationController
     def update
       if Vote.exists?(params[:id])
         vote.update(vote_params)
-        redirect_to vote
+        redirect_to "/links/#{vote.link_id}"
       else
         render :edit
       end

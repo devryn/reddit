@@ -1,8 +1,9 @@
 class LinksController < ApplicationController
 
   def index
+    links = Link.top.page params[:page]
     render locals: {
-      links: Link.all
+      links: links
     }
   end
 

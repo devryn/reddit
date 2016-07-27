@@ -1,0 +1,18 @@
+<h2><%= form_title %></h2>
+
+<% if link.errors.any? %>
+    <% link.errors.full_messages.each do |msg| %>
+      <p> <%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <%= form_for(link) do |f| %>
+    <label for="title">Title</label>
+    <%=f.text_area :title, placeholder: 'You need a URL!', class: 'form-control' %>
+
+    <label for="url">URL</label>
+      <%=f.text_area :url, placeholder: 'Title Your Link', class: 'form-control' %>
+    <p><div class ='actions text-center'>
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  <% end %>
