@@ -2,7 +2,7 @@
   <% links.each do |link| %>
       <ul>
         <li> <%= link_to link.title, link %> </li>
-        <p><%= link.votes.count %> votes</p>
+        <p><%= link.upvotes.count %> upvotes</p>
       </ul>
   <% end %>
 

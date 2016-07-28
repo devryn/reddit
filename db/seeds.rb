@@ -5,9 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-25.times do
-  link = Link.create(title: Faker::Internet.domain_word, url: Faker::Internet.url)
-  rand(1..5).times do
-    Vote.create(link: link)
+25.times do |i|
+  user = User.create(name: "User", email: "email#{i + 1}@example.com")
+  link = Link.create(title: Faker::Internet.domain_word, url: Faker::Internet.url, user_id: user.id)
+
+  if rand > 0.5
+    Upvote.create(user_id: user.id, link_id: link.id)
   end
 end

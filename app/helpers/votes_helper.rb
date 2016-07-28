@@ -1,2 +1,2 @@
-module VotesHelper
+module UpvotesHelper
 end
