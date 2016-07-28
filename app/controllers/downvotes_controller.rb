@@ -8,7 +8,7 @@ class DownvotesController < ApplicationController
   def show
     if Downvote.exists?(params[:id])
     render locals: {
-      upvote: Downvote.find(params[:id])
+      downvote: Downvote.find(params[:id])
     }
     else
       render html: { message: "Vote not found"}, status: 404
@@ -17,7 +17,7 @@ class DownvotesController < ApplicationController
 
   def new
     render locals: {
-      upvote: Downvote.new
+      downvote: Downvote.new
     }
   end
 
