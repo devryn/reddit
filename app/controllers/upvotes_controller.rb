@@ -49,7 +49,7 @@ class UpvotesController < ApplicationController
       if Upvote.exists?(params[:id])
         Upvote.destroy(params[:id])
         flash[:notice] = "Vote destroyed"
-        redirect_to upvotes
+        redirect_to root
       else
         flash[:alert] = "Vote was not destroyed due to errors."
       end
@@ -57,7 +57,7 @@ class UpvotesController < ApplicationController
 
   private
   def upvote_params
-    params.require(:upvote).permit(:link_id)
+    params.require(:upvote).permit(:link_id, :user_id)
   end
 
 end
