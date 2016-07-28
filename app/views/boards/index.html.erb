@@ -1,0 +1,14 @@
+<% boards.each do |board| %>
+    <ul>
+      <li> <%= board.name %> </li>
+      <% board.links.each do |link| %>
+          <ul>
+            <li> <%= link_to link.title, link %> </li>
+
+          </ul>
+      <% end %>
+
+    </ul>
+<% end %>
+
+<%= paginate boards %>

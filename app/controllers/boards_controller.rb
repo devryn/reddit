@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    boards = Board.all
+    boards = Board.all.page params[:page]
     render locals: {
       boards: boards
     }
