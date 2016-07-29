@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :require_login, only: [:edit, :destroy, :create]
+  before_action :require_login, only: [:edit, :destroy, :create, :show]
 
   def index
     links = Link.group(:id).order("SUM(upvotes_count - downvotes_count) DESC").page params[:page]
