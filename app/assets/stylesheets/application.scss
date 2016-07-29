@@ -13,9 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ @import "materialize/components/color";
+ $primary-color: color("blue", "lighten-4") !default;
  @import "materialize";
 
-img {
-  max-height: 100px;
-  max-width: 100px;
+.main-header {
+  background-color: white;
+  text-align: center;
+  img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+}
+
+body {
+  padding: 2em;
 }
