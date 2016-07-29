@@ -5,13 +5,13 @@
       upvotes_path(upvote: {
         link_id: link.id,
         user_id: current_user.id }),
-      method: :POST,
-      class: "btn",
-      remote: false %>
+        method: :POST,
+        class: "btn",
+        remote: true %>
   <%= link_to "Downvote",
       downvotes_path(downvote: {
         link_id: link.id,
-        user_id: current_user.id}),
+        user_id: current_user.id }),
         method: :POST,
         class: "btn",
-          remote: false %>
+        remote: true %>
