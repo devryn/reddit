@@ -28,7 +28,9 @@ class DownvotesController < ApplicationController
     if downvote.save
       redirect_to "/links/#{downvote.link_id}"
     else
-      render :new
+      render :new, locals: {
+        downvote: downvote
+      }
     end
   end
 

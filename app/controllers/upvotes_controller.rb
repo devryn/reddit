@@ -13,7 +13,7 @@ class UpvotesController < ApplicationController
         upvote: Upvote.find(params[:id])
       }
       else
-        render html: { message: "Vote not found"}, status: 404
+        render html: { message: "Vote not found" }, status: 404
       end
     end
 

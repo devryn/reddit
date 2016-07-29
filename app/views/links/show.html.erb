@@ -1,4 +1,5 @@
 <h2><%= link.title %></h2>
-<p><%= link.url %></p>
+<p><%= auto_link(link.url) %></p>
 <p><%= link.upvotes.count %></p>
-<p><%= link_to "new", new_upvote_path %></p>
+<p class='btn primary'><%= link_to "Upvote", new_upvote_path %></p>
+<p class='btn primary'><%= link_to "Downvote", new_downvote_path %></p>

@@ -1,0 +1,19 @@
+<div class='form'>
+  <h2><%= form_title %></h2>
+
+  <%= form_for(downvote) do |f| %>
+  <% if downvote.errors.any? %>
+    <% downvote.errors.full_messages.each do |msg| %>
+      <p> <%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <div class='field'>
+    <%= f.label :link_id %>
+    <%= f.text_field :link_id %>
+  </div>
+
+  <p><div class ='actions text-center'>
+  <%= f.submit %>
+<% end %>
+</div>
