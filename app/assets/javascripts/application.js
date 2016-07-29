@@ -12,9 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require materialize
 //= require_tree .
 
-$(document).ready(function () {
-  console.log();
-});
+$(document).ready(function);
+
+var function () {
+  $('top-btn').on('click', function() {
+
+      console.log('function ran!')
+  });
+
+
+i«f ajax succesful/fails
+new_upvote
+button on board show page that highlights top link when clicked
+top-btn
+»

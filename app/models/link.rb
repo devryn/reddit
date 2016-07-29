@@ -9,6 +9,6 @@ class Link < ApplicationRecord
   paginates_per 20
 
   def votes_count
-    upvotes.count - downvotes.count
+    [upvotes.count - downvotes.count, 0].max
   end
 end

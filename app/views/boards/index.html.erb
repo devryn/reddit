@@ -1,6 +1,6 @@
 <% boards.each do |board| %>
     <ul>
-      <li> <%= link_to board.name, board %> </li>
+      <li><h5><%= link_to board.name, board %></h5></li>
       <% board.links.each do |link| %>
           <ul>
             <li> <%= link_to link.title, link %> </li>
