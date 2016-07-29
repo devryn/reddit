@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
 
@@ -16,6 +18,6 @@ Rails.application.routes.draw do
   resources :users
   resources :upvotes
   resources :links
-  root 'boards#index'
+  root 'dashboard#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
