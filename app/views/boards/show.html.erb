@@ -1,1 +1,5 @@
-<%= Board.find(params[:id]) %>
+<% Board.find(params[:id]) %>
+<%= board.name %>
+<ul><% board.links.each do |link| %>
+<li><%= link.title %></li>
+<% end %></ul>
