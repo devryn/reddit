@@ -1,4 +1,6 @@
 class DownvotesController < ApplicationController
+  before_action :require_login, only: [:create]
+
   def index
     render locals: {
       downvotes: Downvote.all

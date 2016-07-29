@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_action :require_login, only: [:edit, :destroy, :create]
 
   def index
     boards = Board.all.page params[:page]
