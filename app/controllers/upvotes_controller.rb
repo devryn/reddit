@@ -26,7 +26,9 @@ class UpvotesController < ApplicationController
       if upvote.save
         redirect_to "/links/#{upvote.link_id}"
       else
-        render :new
+        render :new, locals: {
+          upvote: upvote
+        }
       end
     end
 

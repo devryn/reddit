@@ -8,13 +8,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header class='main-header'>
-    <h1>Reddit</h1>
-    <img src="http://i.imgur.com/3bPw0u1.png">
-    <%= render 'shared/nav' %>
-  </header>
-
   <body>
+    <header class='main-header'>
+      <h1>Reddit</h1>
+      <img src="http://i.imgur.com/3bPw0u1.png">
+      <%= render 'shared/nav' %>
+    </header>
+
+    <% if signed_in? %>
+      <%= current_user.email %>
+      <%= button_to "Sign out", sign_out_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign in", sign_in_path %>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>

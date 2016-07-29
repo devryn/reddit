@@ -28,7 +28,9 @@ class BoardsController < ApplicationController
     if board.save
       redirect_to root
     else
-      render :new
+      render :new, locals: {
+        board: board
+      }
     end
   end
 

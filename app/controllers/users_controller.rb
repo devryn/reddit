@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login
+  
   def index
     render locals: {
       users: User.all
