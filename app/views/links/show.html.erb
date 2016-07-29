@@ -1,5 +1,17 @@
 <h2><%= link.title %></h2>
-<p><%= auto_link(link.url) %></p>
-<p><%= link.upvotes.count %></p>
-<p class='btn primary'><%= link_to "Upvote", new_upvote_path %></p>
-<p class='btn primary'><%= link_to "Downvote", new_downvote_path %></p>
+  <p><%= auto_link(link.url) %></p>
+  <p><%= link.votes_count %> votes</p>
+  <%= link_to "Upvote",
+      upvotes_path(upvote: {
+        link_id: link.id,
+        user_id: current_user.id }),
+      method: :POST,
+      class: "btn",
+      remote: false %>
+  <%= link_to "Downvote",
+      downvotes_path(downvote: {
+        link_id: link.id,
+        user_id: current_user.id}),
+        method: :POST,
+        class: "btn",
+          remote: false %>
