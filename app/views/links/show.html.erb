@@ -1,6 +1,7 @@
 <h2><%= link.title %></h2>
   <p><%= auto_link(link.url) %></p>
   <p><%= link.votes_count %> votes</p>
+  <% if current_user %>
   <%= link_to "Upvote",
       upvotes_path(upvote: {
         link_id: link.id,
@@ -15,3 +16,6 @@
         method: :POST,
         class: "btn",
         remote: true %>
+  <% else %>
+    <p>You must be logged in to vote.</p>
+  <% end %>
