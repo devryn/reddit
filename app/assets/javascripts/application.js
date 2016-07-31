@@ -15,17 +15,13 @@
 //= require materialize
 //= require_tree .
 
-$(document).ready(function);
-
-var function () {
-  $('top-btn').on('click', function() {
-
-      console.log('function ran!')
+//= does not automatically refresh page when voting
+$(document).ready(function() {
+  $('.upvote').on('click', function() {
+    var count = $(this).parent().find('.counter')
+    console.log(count.text()) //=increment page +1
   });
+});
 
 
-i«f ajax succesful/fails
-new_upvote
-button on board show page that highlights top link when clicked
-top-btn
-»
+//= button on board show page that highlights top link when clicked
