@@ -14,12 +14,3 @@ var Navigation = React.createClass({
     );
   }
 });
-
-
-var Highlight = function() {
-  $('.top-btn').addClass('highlight').on('mouseenter');
-}
-
-var Nolight = function() {
-  $('.top-btn').removeClass('highlight').on('mouseleave');
-}

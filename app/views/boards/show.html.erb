@@ -1,8 +1,4 @@
 <% Board.find(params[:id]) %>
 <h2><%= board.name %></h2>
-<div class='top-btn'>
-  <div class='btn'>Top Link</div>
-</div>
-<ul><% board.links.each do |link| %>
-<li><%= link_to link.title, link %></li>
-<% end %></ul>
+
+<%= react_component("Boardlinks", links: board.links) %>

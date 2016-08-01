@@ -33,10 +33,10 @@ $(document).ready(function() {
   });
 });
 
-var highlight = function() {
-  $(this).addClass('highlight').on('mouseenter');
-}
-
-var nolight = function() {
-  $(this).removeClass('highlight').on('mouseleave');
-}
+// var highlight = function() {
+//   $('.top-btn').addClass('highlight').on('mouseenter');
+// }
+//
+// var nolight = function() {
+//   $('.top-btn').removeClass('highlight').on('mouseleave');
+// }
