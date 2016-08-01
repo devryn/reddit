@@ -2,7 +2,7 @@ var Navigation = React.createClass({
 
   render: function() {
     return (
-    <header class='main-header'>
+    <header className='main-header'>
       <h1>Reddit</h1>
         <img src="http://i.imgur.com/3bPw0u1.png"/>
       <nav>
@@ -14,3 +14,12 @@ var Navigation = React.createClass({
     );
   }
 });
+
+
+var Highlight = function() {
+  $('.top-btn').addClass('highlight').on('mouseenter');
+}
+
+var Nolight = function() {
+  $('.top-btn').removeClass('highlight').on('mouseleave');
+}
