@@ -18,10 +18,23 @@
 //= does not automatically refresh page when voting
 $(document).ready(function() {
   $('.upvote').on('click', function() {
-    var count = $(this).parent().find('.counter')
-    console.log(count.text()) //=increment page +1
+    var count = $(this).attr('.upvote').parent.find('.counter');
+    console.log(count.text(parseInt('votes_count') + 1));
   });
 });
 
+$(document).ready(function() {
+  $('.downvote').on('click', function() {
+    var count = $(this).parent().find('.counter')
+    console.log(count.text(parseInt('votes_count') - 1));
+  });
+});
 
-//= button on board show page that highlights top link when clicked
+var highlight = function() {
+  $(this).addClass('highlight').on('mouseenter');
+}
+
+var nolight = function() {
+  $(this).removeClass('highlight').on('mouseleave');
+}
+// = button on board show page that highlights top link when clicked
