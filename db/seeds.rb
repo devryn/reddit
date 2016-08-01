@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 25.times do |i|
   board = Board.create(name: Faker::Book.title)
-  user = User.create!(name: Faker::Name.name, email: "email#{i + 1}@example.com")
+  user = User.create!(name: Faker::Name.name, email: "email#{i + 1}@example.com", password: "password")
 
   5.times do
   link = Link.create!(title: Faker::Internet.domain_word, url: Faker::Internet.url, user_id: user.id, board_id: board.id)

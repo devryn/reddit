@@ -29,6 +29,7 @@ gem 'pg'
 gem 'materialize-sass'
 gem 'rails-pry'
 gem 'rails_autolink'
+gem 'react-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

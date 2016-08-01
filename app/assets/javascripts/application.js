@@ -14,6 +14,9 @@
 //= require jquery_ujs
 
 //= require materialize
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 
 $(document).ready(function() {
