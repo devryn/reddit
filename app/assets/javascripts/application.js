@@ -12,21 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+
 //= require materialize
 //= require_tree .
 
-//= does not automatically refresh page when voting
 $(document).ready(function() {
   $('.upvote').on('click', function() {
-    var count = $(this).attr('.upvote').parent.find('.counter');
-    console.log(count.text(parseInt('votes_count') + 1));
+    var count = $(this).parent().find('.counter');
+    console.log(count.html( (parseInt(count.text()) + 1) + " votes" ));
   });
 });
 
 $(document).ready(function() {
   $('.downvote').on('click', function() {
     var count = $(this).parent().find('.counter')
-    console.log(count.text(parseInt('votes_count') - 1));
+    console.log(count.html( (parseInt(count.text()) - 1) + " votes" ));
   });
 });
 
@@ -37,4 +37,3 @@ var highlight = function() {
 var nolight = function() {
   $(this).removeClass('highlight').on('mouseleave');
 }
-// = button on board show page that highlights top link when clicked
